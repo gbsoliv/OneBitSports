@@ -1,0 +1,194 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem; 
+}
+
+/* Header and Navigation styles */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-left img {
+    height: 40px; 
+    margin-left: 2rem;
+}
+
+.nav-right {
+    margin-right: 2rem; 
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem; 
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem; 
+}
+
+/* Main container styles */
+#main-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.main-content {
+    flex-grow: 2;
+    padding-right: 1rem;
+}
+
+#grid-section {
+    display: grid;
+    grid-template-areas: 
+        "boxing crossfit swimming"
+        "clothing basketball running"
+        "surfing hiking tennis";
+    gap: 1rem;
+}
+
+.sport-box {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.sport-box:hover {
+    border: 1px solid rgba(119, 118, 118, 0.925);
+}
+
+.sport-box .image {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    border-radius: 5px 5px 0 0;
+}
+
+.sport-box h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.sport-box p {
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 1.25rem;
+}
+
+#grid-section .boxing { grid-area: boxing; }
+#grid-section .crossfit { grid-area: crossfit; }
+#grid-section .swimming { grid-area: swimming; }
+#grid-section .clothing { grid-area: clothing; }
+#grid-section .basketball { grid-area: basketball; }
+#grid-section .running { grid-area: running; }
+#grid-section .surfing { grid-area: surfing; }
+#grid-section .hiking { grid-area: hiking; }
+#grid-section .tennis { grid-area: tennis; }
+
+/* Aside styles */
+aside {
+    flex-grow: 1;
+    margin-left: 1rem;
+}
+
+aside h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+aside .extra-category {
+    background: #f0f0f0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+aside .extra-category .image {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 0.5rem;
+}
+
+aside .extra-category h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+aside .extra-category:hover {
+    border: 1px solid rgba(119, 118, 118, 0.925);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #main-container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        padding-right: 0;
+    }
+
+    aside {
+        margin-left: 0;
+    }
+
+    #grid-section {
+        grid-template-areas: 
+            "boxing"
+            "crossfit"
+            "swimming"
+            "clothing"
+            "basketball"
+            "running"
+            "surfing"
+            "hiking"
+            "tennis";
+    }
+}
